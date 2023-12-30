@@ -14,7 +14,7 @@ export const Header = () => {
 
       {/* nav */}
       <div>
-        <ul className='flex'>
+        <ul className='text-white'>
           <li>Home</li>
           <li>About</li>
           <li>Appointment</li>
