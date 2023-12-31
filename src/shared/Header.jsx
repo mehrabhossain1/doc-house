@@ -6,7 +6,7 @@ import { Button } from '../components/Button/Button'
 
 export const Header = () => {
   return (
-    <div className='bg-[#07332F] w-[100%] h-[80vh]'>
+    <div className='bg-[#07332F] w-[100%] h-[800px]'>
       {/* logo and nav */}
       <div className='flex justify-between items-center'>
         <div className='flex items-center'>
