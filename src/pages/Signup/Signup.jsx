@@ -1,4 +1,7 @@
+import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../../providers/AuthProvider'
 
 export const Signup = () => {
   const {
@@ -6,8 +9,15 @@ export const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  const onSubmit = (data) => console.log(data)
 
+  const { createUser } = useContext(AuthContext)
+
+  const onSubmit = (data) => {
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user
+      console.log(loggedUser)
+    })
+  }
   return (
     <div className='flex items-center justify-center h-screen'>
       <form
@@ -91,6 +101,12 @@ export const Signup = () => {
             type='submit'
             className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer'
           />
+          <Link
+            to='/login'
+            className='text-blue-500 hover:text-blue-700 text-sm'
+          >
+            Already have an account? Login
+          </Link>
         </div>
       </form>
     </div>
