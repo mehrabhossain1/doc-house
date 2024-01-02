@@ -1,9 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import logo from '../assets/logo.svg'
 
-// import img2 from '../assets/bannerImg2.jpeg'
-// import img3 from '../assets/bannerImg3.jpeg'
-
 export const Header = () => {
   const ActiveLink = ({ to, children }) => {
     const location = useLocation()
