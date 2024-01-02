@@ -40,7 +40,7 @@ export const Login = () => {
             Sign In
           </button>
           <Link
-            to='/signup' // Specify the route for the Sign Up page
+            to='/signup'
             className='text-blue-500 hover:text-blue-700 text-sm'
           >
             Don't have an account? Sign Up
