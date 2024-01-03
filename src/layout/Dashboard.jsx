@@ -9,9 +9,10 @@ export const Dashboard = () => {
           <li className='text-white'>All Users</li>
           <li className='text-white'>Add a Doctor</li>
           <li className='text-white'>Manage Doctors</li>
-          <Link to='/'>
-            <li className='text-white'>Home</li>
-          </Link>
+
+          <li className='text-white'>
+            <Link to='/'>Home</Link>
+          </li>
         </ul>
       </div>
 

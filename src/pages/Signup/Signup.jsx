@@ -1,9 +1,11 @@
 import { useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../providers/AuthProvider'
 
 export const Signup = () => {
+  const navigate = useNavigate()
+
   const {
     register,
     handleSubmit,
@@ -16,10 +18,19 @@ export const Signup = () => {
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user
       console.log(loggedUser)
+      alert('User registered successfully')
+      navigate('/')
     })
   }
+
   return (
     <div className='flex items-center justify-center h-screen'>
+      <div className='text-center mb-8 mx-5'>
+        <h2 className='text-3xl font-bold text-gray-800'>
+          Welcome To Doc House!
+        </h2>
+        <p className='text-gray-600'>Create an account</p>
+      </div>
       <form
         className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96'
         onSubmit={handleSubmit(onSubmit)}
