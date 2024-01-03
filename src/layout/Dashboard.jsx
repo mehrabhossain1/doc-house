@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
-import Chart from '../components/Chart/Chart'
 
 export const Dashboard = () => {
   const location = useLocation()
@@ -63,9 +62,7 @@ export const Dashboard = () => {
             </div>
           </div>
         )}
-        <div>
-          <Chart />
-        </div>
+        <div>Chart</div>
       </div>
     </div>
   )
