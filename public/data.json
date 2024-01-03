@@ -1,0 +1,9 @@
+{
+  "totalDoctors": 25,
+  "totalPatients": 300,
+  "appointments": {
+    "upcoming": 50,
+    "pending": 15,
+    "completed": 235
+  }
+}
