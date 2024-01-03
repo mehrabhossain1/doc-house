@@ -6,6 +6,9 @@ import { About } from '../pages/About/About'
 import { Appointment } from '../pages/Appointment/Appointment'
 import { Login } from '../pages/Login/Login'
 import { Signup } from '../pages/Signup/Signup'
+import AllUsers from '../pages/Dashboard/AllUsers'
+import ManageDoctors from '../pages/Dashboard/ManageDoctors'
+import AddADoctor from '../pages/Dashboard/AddADoctor'
 
 export const router = createBrowserRouter([
   {
@@ -37,5 +40,19 @@ export const router = createBrowserRouter([
   {
     path: 'dashboard',
     element: <Dashboard />,
+    children: [
+      {
+        path: '/dashboard/all-users',
+        element: <AllUsers />,
+      },
+      {
+        path: '/dashboard/add-a-doctor',
+        element: <AddADoctor />,
+      },
+      {
+        path: '/dashboard/manage-doctors',
+        element: <ManageDoctors />,
+      },
+    ],
   },
 ])
