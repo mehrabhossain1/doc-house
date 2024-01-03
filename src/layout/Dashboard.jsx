@@ -6,10 +6,15 @@ export const Dashboard = () => {
       {/* Left Side - Navigation */}
       <div className='w-1/4 bg-gray-800 p-6'>
         <ul className='space-y-4'>
-          <li className='text-white'>All Users</li>
-          <li className='text-white'>Add a Doctor</li>
-          <li className='text-white'>Manage Doctors</li>
-
+          <li className='text-white'>
+            <Link to='/all-users'>All Users</Link>
+          </li>
+          <li className='text-white'>
+            <Link to='/add-a-doctor'>Add a Doctor</Link>{' '}
+          </li>
+          <li className='text-white'>
+            <Link to='/manage-doctors'>Manage Doctors</Link>
+          </li>
           <li className='text-white'>
             <Link to='/'>Home</Link>
           </li>
